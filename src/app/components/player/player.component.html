@@ -1,0 +1,30 @@
+<div class="playerContainer">
+
+  <!-- If there's an exception a component with an error will pop up -->
+  <app-error *ngIf="exception; else playerProfileCard"></app-error>
+
+  <!-- Card with the selected player's data -->
+  <ng-template #playerProfileCard>
+    <mat-card *ngIf="playerProfile" class="profileCard">
+
+      <div class="cardBody">
+
+        <!-- Image with the face of the player -->
+        <img src="{{playerProfile.photoURL}}" height="120px" style="margin-right: auto;">
+
+        <!-- Container with the player's data -->
+        <div class="cardData">
+          <span class="title">{{playerProfile.fullName}}</span>
+          <span>{{playerProfile.team}}</span>
+          <span>Asistencias: <span class="weight-500">{{playerProfile.assistsPerGame}}</span></span>
+          <span>Partidos jugados: <span class="weight-500">{{playerProfile.gamesPlayed}}</span></span>
+          <span>Minutos jugados por partido: <span class="weight-500">{{playerProfile.minutesPerGame}}</span></span>
+          <span>Puntos anotados por partido: <span class="weight-500">{{playerProfile.pointsPerGame}}</span></span>
+        </div>
+
+      </div>
+
+    </mat-card>
+  </ng-template>
+
+</div>

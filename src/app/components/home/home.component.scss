@@ -1,0 +1,61 @@
+.playerCard {
+  text-align: left;
+  margin: 20px 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  cursor: pointer;
+}
+
+.playerCard:hover {
+  background: hsla(342, 76%, 48%, 1);
+  color: white;
+}
+
+.textPlayerCard {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.title {
+  color: white;
+  font-size: 28px;
+  ;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.titleCard {
+  background: hsla(212, 81%, 35%, 1);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 680px;
+}
+
+
+
+.loadingCard {
+  padding: 20px;
+  margin-top: 20px;
+  background: hsla(342, 76%, 48%, 1);
+  color: white;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.text-500-28-left {
+  margin-right: auto;
+  font-size: 28px;
+  font-weight: 500;
+}

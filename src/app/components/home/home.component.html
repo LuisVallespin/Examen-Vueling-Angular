@@ -1,0 +1,37 @@
+<!-- Title of the Main Page -->
+<mat-card class="titleCard">
+  <img src="../../../assets/NBALogo.svg" height="100px" style="margin-right: auto;">
+  <span class="title">NBA Player List</span>
+</mat-card>
+
+<!-- If there's an exception a component with an error message will pop up -->
+<app-error *ngIf="exception; else playerList"></app-error>
+
+<ng-template #playerList>
+  <div *ngIf="players; else loading">
+
+    <!-- List with all the players fetched from the API -->
+    <mat-card (click)="openDialog(item.name, item.lastName)" class="playerCard" *ngFor="let item of players">
+      
+      <!-- Simple card with the player's data -->
+      <div class="textPlayerCard">
+        <span class="text-500-28-left">{{item.name}} {{item.lastName}}</span>
+        <span>{{item.team.name}}</span>
+      </div>
+
+    </mat-card>
+  </div>
+
+  <!-- Block that shows while the data is getting fetched -->
+  <ng-template #loading>
+    <mat-card class="loadingCard">
+      
+      <div class="loadingContainer">
+        <mat-spinner [color]="color" style="margin-right: auto;"></mat-spinner>
+        <span class="text-500-28-left">Cargando</span>
+      </div>
+
+    </mat-card>
+  </ng-template>
+
+</ng-template>

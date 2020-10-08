@@ -1,0 +1,33 @@
+.title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.profileCard {
+  color: white;
+  background: hsla(212, 81%, 35%, 1);
+  width: 680px;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.playerContainer {
+  min-width: 580px;
+  max-width: 900px;
+}
+
+.cardBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.cardData {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
